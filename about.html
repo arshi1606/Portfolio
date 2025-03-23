@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
   <head>
-    <!--- basic page needs
-    ================================================== -->
+    <!--- basic page needs ================================================== -->
     <meta charset="utf-8" />
+    <link rel="icon" type="image/x-icon" href="images/favicon.svg" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>About - Arshi Patel</title>
 
@@ -12,15 +13,20 @@
       document.documentElement.classList.add("js");
     </script>
 
-    <!-- CSS
-    ================================================== -->
+    <!-- CSS ================================================== -->
     <link rel="stylesheet" href="css/vendor.css" />
     <link rel="stylesheet" href="css/styles.css" />
+    <!-- Animate.css for animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <style>
+      /* Custom animation delays */
+      .animate-delay-1 { animation-delay: 0.5s; }
+      .animate-delay-2 { animation-delay: 1s; }
+    </style>
   </head>
 
   <body id="top">
-    <!-- preloader
-    ================================================== -->
+    <!-- preloader ================================================== -->
     <div id="preloader">
       <div id="loader" class="dots-fade">
         <div></div>
@@ -29,16 +35,13 @@
       </div>
     </div>
 
-    <!-- page wrap
-    ================================================== -->
+    <!-- page wrap ================================================== -->
     <div id="page" class="s-pagewrap">
-      <!-- # site header 
-        ================================================== -->
-      <header class="s-header">
+      <!-- # site header ================================================== -->
+      <header class="s-header animate__animated animate__fadeInDown">
         <div class="row s-header__inner width-sixteen-col">
           <div class="s-header__block">
             <li><a href="index.html">Home</a></li>
-
             <a class="s-header__menu-toggle" href="#0"><span>Menu</span></a>
           </div>
           <!-- end s-header__block -->
@@ -47,17 +50,12 @@
             <ul class="s-header__menu-links">
               <li class="current"><a href="about.html">About</a></li>
               <li><a href="services.html">Services</a></li>
-              
               <li><a href="contact.html">Contact</a></li>
             </ul>
             <!-- s-header__menu-links -->
 
             <div class="s-header__contact">
-              <a
-                href="contact.html"
-                class="btn btn--primary s-header__contact-btn"
-                >Let's Work Together</a
-              >
+              <a href="contact.html" class="btn btn--primary s-header__contact-btn">Let's Work Together</a>
             </div>
             <!-- s-header__contact -->
           </nav>
@@ -67,10 +65,10 @@
       </header>
       <!-- end s-header -->
 
-      <!-- # site main content
-        ================================================== -->
+      <!-- # site main content ================================================== -->
       <section id="content" class="s-content">
-        <section class="s-pageheader pageheader">
+        <!-- Page Header -->
+        <section class="s-pageheader pageheader animate__animated animate__fadeInDown">
           <div class="row">
             <div class="column xl-12">
               <h1 class="page-title">
@@ -82,8 +80,9 @@
         </section>
         <!-- end pageheader -->
 
+        <!-- About Me Section -->
         <section class="s-pagecontent pagecontent">
-          <div class="row pageintro">
+          <div class="row pageintro animate__animated animate__fadeIn">
             <div class="column xl-6 lg-12">
               <h2 class="text-display-title">
                 Innovative Thinker with a Passion for AI, ML, and Business
@@ -91,26 +90,21 @@
             </div>
             <div class="column xl-6 lg-12 u-flexitem-x-right">
               <p class="lead">
-                With a deep-rooted passion for Artificial Intelligence, Machine Learning, and cutting-edge design, I combine my technical expertise with innovative thinking to solve complex challenges. I thrive at the intersection of technology and business, constantly pushing the boundaries of what's possible while creating meaningful solutions that make an impact.
+                With a deep-rooted passion for Artificial Intelligence, Machine Learning, and cutting-edge design, I combine my technical expertise with innovative thinking to solve complex challenges. I thrive at the intersection of technology and business, constantly pushing the boundaries of what's possible while creating meaningful solutions.
               </p>
             </div>
           </div>
           <!-- end pageintro -->
         
-          <div class="row pagemedia">
+          <div class="row pagemedia animate__animated animate__fadeInUp">
             <div class="column xl-12">
               <figure class="page-media">
-                <img
-                  src="images/Final_me.jpeg"
-                 
-                  sizes="(max-width: 2400px) 100vw, 2400px"
-                  alt="Profile Image"
-                />
+                <img src="images/Final_me.jpeg" sizes="(max-width: 2400px) 100vw, 2400px" alt="Profile Image" />
               </figure>
             </div>
           </div>
           <!-- end pagemedia -->
-        
+
           <div class="row width-narrower pagemain">
             <div class="column xl-12">
               <h2>How I Got Here</h2>
@@ -119,8 +113,7 @@
               </p>
         
               <h2 class="u-add-bottom">My Values & Beliefs</h2>
-        
-              <div class="grid-list-items list-items">
+              <div class="grid-list-items list-items animate__animated animate__fadeInUp">
                 <div class="grid-list-items__item list-items__item u-remove-bottom">
                   <div class="list-items__item-header">
                     <h6 class="list-items__item-small-title">Innovation</h6>
@@ -146,7 +139,7 @@
                   </p>
                 </div>
               </div>
-              <!--grid-list-items -->
+              <!-- end grid-list-items -->
         
               <h2>Why Work With Me</h2>
               <p>
@@ -158,16 +151,179 @@
                 I am always eager to learn and grow, continually updating my skillset to stay ahead in a rapidly evolving tech landscape. Outside of work, I am passionate about mentoring aspiring professionals and contributing to innovative community-driven projects. Let's connect and explore how we can work together to make a difference.
               </p>
             </div>
-            <!-- end grid-block-->
+            <!-- end column -->
           </div>
           <!-- end pagemain -->
         </section>
-        
-        
+        <!-- End About Me Section -->
 
-      <!-- # cta
-        ================================================== -->
-        <section id="cta" class="s-cta">
+        <!-- Projects & Features Section -->
+        <section id="projects-features" class="s-projects animate__animated animate__fadeInUp">
+          <style>
+            /* Projects & Features Section Styles */
+            .s-projects {
+              padding: 60px 0;
+              background: #f9f9f9;
+            }
+            .s-projects .section-title {
+              font-size: 2.5em;
+              text-align: center;
+              margin-bottom: 20px;
+              color: #333;
+            }
+            .s-projects .section-intro {
+              text-align: center;
+              font-size: 1.2em;
+              color: #666;
+              margin-bottom: 40px;
+            }
+            .project-item {
+              margin-bottom: 40px;
+              background: #fff;
+              padding: 20px;
+              border-radius: 8px;
+              box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            }
+            .project-title {
+              font-size: 1.8em;
+              color: #222;
+              margin-bottom: 15px;
+              border-bottom: 2px solid #e0e0e0;
+              padding-bottom: 10px;
+            }
+            .project-features {
+              list-style: none;
+              padding-left: 0;
+            }
+            .project-features li {
+              margin-bottom: 10px;
+              font-size: 1.1em;
+              color: #444;
+              line-height: 1.6;
+            }
+            .project-features li strong,
+            .project-features li .feature-label {
+              font-weight: bold;
+              color: #000;
+            }
+          </style>
+
+          <div class="row">
+            <div class="column xl-12">
+              <h2 class="section-title">Projects & Features</h2>
+              <p class="section-intro">
+                Over the course of my career, I have led and contributed to several innovative projects that combine web technologies, AI, and data science.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Collaborative Coding Platform Project -->
+          <div class="row project-item animate__animated animate__fadeInUp animate-delay-1">
+            <div class="column xl-12">
+              <h3 class="project-title">Collaborative Coding Platform</h3>
+              <ul class="project-features">
+                <li><span class="feature-label">Web Scraping for GitHub Data:</span> Collect data from public GitHub repositories.</li>
+                <li><span class="feature-label">Access to Public Repositories:</span> View and analyze code from any public repository.</li>
+                <li><span class="feature-label">Repository Insights:</span> Fetch metrics like stars, forks, and issues for popular projects.</li>
+                <li><span class="feature-label">AI-Powered Code Decoding:</span> Use AI tools to understand and decode code from repositories.</li>
+                <li><span class="feature-label">Real-Time Multi-User Coding:</span> Work simultaneously on code in secure private rooms.</li>
+                <li><span class="feature-label">Live Chat & Drawing Boards:</span> Collaborate instantly with live chat and brainstorming tools.</li>
+                <li><span class="feature-label">Instant Code Sync & Multi-Language Support:</span> Real-time updates for languages like JavaScript, Python, Java, C++, and more.</li>
+              </ul>
+            </div>
+          </div>
+          
+          <!-- Additional Projects -->
+          <div class="row project-item animate__animated animate__fadeInUp animate-delay-2">
+            <div class="column xl-12">
+              <h3 class="project-title">Additional Projects</h3>
+              <ul class="project-features">
+                <li><strong>Breast Cancer Detection Model:</strong> Developed an SVM-based machine learning model to classify breast cancer from ultrasonic images and integrated it with a user-friendly web interface.</li>
+                <li><strong>Mobile Company Data Analysis:</strong> Analyzed mobile company data to extract insights on customer behavior and network performance.</li>
+                <li><strong>Blogs Site:</strong> Created a dynamic blog platform with a focus on responsive design and SEO optimization.</li>
+                <li><strong>Calendro – Full Calendar App:</strong> Developed a full-featured calendar application for event management and scheduling.</li>
+                <li><strong>Todo List:</strong> Built a user-friendly todo list application with real-time data sync and task management features.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <!-- End Projects & Features Section -->
+
+        <!-- Internship Experience Section -->
+        <section id="internship-experience" class="s-internships animate__animated animate__fadeInUp">
+          <style>
+            /* Internship Experience Section Styles */
+            .s-internships {
+              padding: 60px 0;
+              background: #fff;
+            }
+            .s-internships .section-title {
+              font-size: 2.5em;
+              text-align: center;
+              margin-bottom: 20px;
+              color: #333;
+            }
+            .s-internships .section-intro {
+              text-align: center;
+              font-size: 1.2em;
+              color: #666;
+              margin-bottom: 40px;
+            }
+            .internship-item {
+              margin-bottom: 20px;
+              padding: 20px;
+              border: 1px solid #e0e0e0;
+              border-radius: 8px;
+              background: #f7f7f7;
+              box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            }
+            .internship-item p {
+              margin: 0;
+              font-size: 1.1em;
+              line-height: 1.6;
+              color: #444;
+            }
+            .internship-item strong {
+              color: #222;
+            }
+          </style>
+          
+          <div class="row">
+            <div class="column xl-12">
+              <h2 class="section-title">Internship Experience</h2>
+              <p class="section-intro">
+                My hands-on experience through internships has shaped my technical expertise and professional growth:
+              </p>
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="column xl-12">
+              <div class="internship-item animate__animated animate__fadeInUp animate-delay-1">
+                <p>
+                  <strong>EDUNET FOUNDATION – Frontend Web Development Intern (Jun 2023 - Jul 2023):</strong>
+                  Contributed to building responsive, visually appealing web interfaces using HTML, CSS, and JavaScript while collaborating closely with design teams.
+                </p>
+              </div>
+              <div class="internship-item animate__animated animate__fadeInUp animate-delay-2">
+                <p>
+                  <strong>GLOBALCERT PVT. LTD. – Intern (May 2024 - Jun 2024):</strong>
+                  Developed a machine learning model for predicting house prices across European markets and refined my focus on data science and AI.
+                </p>
+              </div>
+              <div class="internship-item animate__animated animate__fadeInUp animate-delay-2">
+                <p>
+                  <strong>CODAGE HABITATION – React Developer Intern (Dec 2024 - Present):</strong>
+                  Engaged in backend development and dynamic website creation, enhancing teamwork, creativity, and communication skills.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- End Internship Experience Section -->
+
+        <!-- Call-to-Action Section -->
+        <section id="cta" class="s-cta animate__animated animate__fadeInUp">
           <div class="row row-x-center text-center">
             <div class="column xl-8 lg-12">
               <div class="s-cta__content">
@@ -177,165 +333,90 @@
                 <p class="lead">
                   Discover how my expertise in AI, Machine Learning, Design, and Business Innovation can benefit your projects and goals. Whether you need advanced AI solutions, machine learning model development, engaging design, or strategic business insights, I’m here to help. Let’s explore how we can work together to turn your ideas into successful outcomes. Reach out now to schedule your consultation and take the first step towards achieving your objectives.
                 </p>
-                <a href="contact.html" class="btn btn--primary"
-                  >Let's Work Together</a
-                >
+                <a href="contact.html" class="btn btn--primary">Let's Work Together</a>
               </div>
             </div>
           </div>
         </section>
         <!-- end s-cta -->
-  
+      </section>
+      <!-- end s-content -->
 
-       <!-- # footer 
-        ================================================== -->
-        <footer class="s-footer">
-          <div class="row s-footer__content">
-            <div class="column xl-6 lg-6 md-12 s-footer__block s-footer__about">
-              <h3>About Arshi</h3>
-              <p>
-                I am a Computer Engineering student with a keen interest in AI,
-                Machine Learning, and Data Science. I thrive in collaborative
-                environments and enjoy tackling technical challenges. With
-                hands-on experience from internships and hackathons, I am always
-                eager to learn and contribute to innovative projects. Let’s
-                connect and see what we can achieve together!
-              </p>
-            </div>
-            <div
-              class="column xl-3 lg-6 md-12 s-footer__block s-footer__site-links"
-            >
-              <h3>Site Links</h3>
-              <ul class="link-list">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="services.html">Services</a></li>
-               
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
-              </ul>
-            </div>
-            <div
-              class="column xl-3 lg-6 md-12 tab-12 s-footer__block s-footer__newsletter"
-            >
-              <div class="subscribe-form">
-                <form id="mc-form" class="mc-form">
-                  <input
-                    type="email"
-                    name="EMAIL"
-                    id="mce-EMAIL"
-                    class="u-fullwidth text-center"
-                    placeholder="Your Email Address"
-                    title="The domain portion of the email address is invalid (the portion after the @)."
-                    pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$"
-                    required
-                  />
-                  <input
-                    type="submit"
-                    name="subscribe"
-                    value="Subscribe"
-                    class="btn btn--primary btn--small u-fullwidth"
-                  />
-                  <!-- <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_cdb7b577e41181934ed6a6a44_9a91cfe7b3" tabindex="-1" value=""></div> -->
-                  <div class="mc-status"></div>
-                </form>
-              </div>
+      <!-- Footer ================================================== -->
+      <footer class="s-footer animate__animated animate__fadeInUp">
+        <div class="row s-footer__content">
+          <div class="column xl-6 lg-6 md-12 s-footer__block s-footer__about">
+            <h3>About Arshi</h3>
+            <p>
+              I am a Computer Engineering student with a keen interest in AI, Machine Learning, and Data Science. I thrive in collaborative environments and enjoy tackling technical challenges. With hands-on experience from internships and hackathons, I am always eager to learn and contribute to innovative projects. Let’s connect and see what we can achieve together!
+            </p>
+          </div>
+          <div class="column xl-3 lg-6 md-12 s-footer__block s-footer__site-links">
+            <h3>Site Links</h3>
+            <ul class="link-list">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+          <div class="column xl-3 lg-6 md-12 tab-12 s-footer__block s-footer__newsletter">
+            <div class="subscribe-form">
+              <form id="mc-form" class="mc-form">
+                <input type="email" name="EMAIL" id="mce-EMAIL" class="u-fullwidth text-center" placeholder="Your Email Address" required />
+                <input type="submit" name="subscribe" value="Subscribe" class="btn btn--primary btn--small u-fullwidth" />
+                <div class="mc-status"></div>
+              </form>
             </div>
           </div>
+        </div>
   
-          <div class="row s-footer__bottom">
-            <div class="column xl-6 lg-12">
-              <ul class="s-footer__social social-list">
-              
-                <li>
-                  <a href="https://github.com/arshi1606">
-                    <a
-                      href="https://github.com/arshi1606"
-                      target="_blank"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        enable-background="new 0 0 28 27.311"
-                        viewBox="0 0 28 27.311"
-                        id="github"
-                      >
-                        <path
-                          d="M28,14c0-7.732-6.268-14-14-14S0,6.268,0,14c0,6.221,4.061,11.488,9.674,13.311c0.767-0.235,0.803-0.702,0.803-0.702s0-1.383,0-2.661c-0.843,0.155-1.89,0.157-2.271,0.157c-0.464,0-2.009-0.386-2.689-2.132c-0.68-1.746-1.947-1.916-1.947-2.225s0.278-0.371,0.278-0.371s0.17,0,0.927,0c0.757,0,1.514,1.267,2.04,2.04s1.792,0.927,2.411,0.927c0.347,0,0.885-0.175,1.294-0.329c0.167-1.082,0.792-1.896,0.792-1.896c-6.243-0.556-6.397-5.223-6.397-7.046c0-1.823,1.484-3.616,1.484-3.616s-0.719-2.04,0.185-3.709c1.947,0.015,3.894,1.483,3.894,1.483S12.238,6.676,14,6.676s3.523,0.556,3.523,0.556s1.947-1.468,3.894-1.483c0.904,1.669,0.185,3.709,0.185,3.709s1.484,1.792,1.484,3.616c0,1.823-0.155,6.49-6.397,7.046c0,0,0.834,1.082,0.834,2.411s0,4.08,0,4.08s0.035,0.466,0.803,0.702C23.939,25.488,28,20.221,28,14z"
-                        ></path>
-                      </svg>
-                    </a>
-                </li>
-                
-                <li>
-                  <a href="https://www.linkedin.com/in/arshi-patel1606">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="2500"
-                      height="2500"
-                      viewBox="7.025 7.025 497.951 497.95"
-                      id="linkedin"
-                    >
-                      <linearGradient
-                        id="a"
-                        x1="-974.482"
-                        x2="-622.378"
-                        y1="1306.773"
-                        y2="1658.877"
-                        gradientTransform="translate(1054.43 -1226.825)"
-                        gradientUnits="userSpaceOnUse"
-                      >
-                        <stop offset="0" stop-color="#2489be"></stop>
-                        <stop offset="1" stop-color="#0575b3"></stop>
-                      </linearGradient>
-                      <path
-                        fill="url(#a)"
-                        d="M256 7.025C118.494 7.025 7.025 118.494 7.025 256S118.494 504.975 256 504.975 504.976 393.506 504.976 256C504.975 118.494 393.504 7.025 256 7.025zm-66.427 369.343h-54.665V199.761h54.665v176.607zM161.98 176.633c-17.853 0-32.326-14.591-32.326-32.587 0-17.998 14.475-32.588 32.326-32.588s32.324 14.59 32.324 32.588c.001 17.997-14.472 32.587-32.324 32.587zm232.45 199.735h-54.4v-92.704c0-25.426-9.658-39.619-29.763-39.619-21.881 0-33.312 14.782-33.312 39.619v92.704h-52.43V199.761h52.43v23.786s15.771-29.173 53.219-29.173c37.449 0 64.257 22.866 64.257 70.169l-.001 111.825z"
-                      ></path>
-                    </svg>
-                    <span class="u-screen-reader-text">Linkedln</span>
-                  </a>
-                </li>
-              </ul>
-              <!-- end s-footer__social -->
-            </div>
-            <div class="column xl-6 lg-12">
-              <p class="ss-copyright">
-                <span>© Copyright Arshi 2024</span>
-                <span
-                  >Design by Arshi Patel
-          
-              </p>
-            </div>
-  
-            <div class="ss-go-top">
-              <a class="smoothscroll" title="Back to Top" href="#top">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  width="36"
-                  height="36"
-                  fill="none"
-                  stroke="#ffffff"
-                  stroke-width="1"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                >
-                  &lt;!--! Atomicons Free 1.00 by @atisalab License -
-                  https://atomicons.com/license/ (Icons: CC BY 4.0) Copyright 2024
-                  Atomicons --&gt;
-                  <polyline points="17 11 12 6 7 11"></polyline>
-                  <line x1="12" y1="18" x2="12" y2="6"></line>
-                </svg>
-              </a>
-            </div>
-            <!-- end ss-go-top -->
+        <div class="row s-footer__bottom">
+          <div class="column xl-6 lg-12">
+            <ul class="s-footer__social social-list">
+              <li>
+                <a href="https://github.com/arshi1606" target="_blank">
+                  <svg xmlns="http://www.w3.org/2000/svg" enable-background="new 0 0 28 27.311" viewBox="0 0 28 27.311" id="github">
+                    <path d="M28,14c0-7.732-6.268-14-14-14S0,6.268,0,14c0,6.221,4.061,11.488,9.674,13.311c0.767-0.235,0.803-0.702,0.803-0.702s0-1.383,0-2.661c-0.843,0.155-1.89,0.157-2.271,0.157c-0.464,0-2.009-0.386-2.689-2.132c-0.68-1.746-1.947-1.916-1.947-2.225s0.278-0.371,0.278-0.371s0.17,0,0.927,0c0.757,0,1.514,1.267,2.04,2.04s1.792,0.927,2.411,0.927c0.347,0,0.885-0.175,1.294-0.329c0.167-1.082,0.792-1.896,0.792-1.896c-6.243-0.556-6.397-5.223-6.397-7.046c0-1.823,1.484-3.616,1.484-3.616s-0.719-2.04,0.185-3.709c1.947,0.015,3.894,1.483,3.894,1.483S12.238,6.676,14,6.676s3.523,0.556,3.523,0.556s1.947-1.468,3.894-1.483c0.904,1.669,0.185,3.709,0.185,3.709s1.484,1.792,1.484,3.616c0,1.823-0.155,6.49-6.397,7.046c0,0,0.834,1.082,0.834,2.411s0,4.08,0,4.08s0.035,0.466,0.803,0.702C23.939,25.488,28,20.221,28,14z"></path>
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.linkedin.com/in/arshi-patel1606" target="_blank">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="2500" height="2500" viewBox="7.025 7.025 497.951 497.95" id="linkedin">
+                    <linearGradient id="a" x1="-974.482" x2="-622.378" y1="1306.773" y2="1658.877" gradientTransform="translate(1054.43 -1226.825)" gradientUnits="userSpaceOnUse">
+                      <stop offset="0" stop-color="#2489be"></stop>
+                      <stop offset="1" stop-color="#0575b3"></stop>
+                    </linearGradient>
+                    <path fill="url(#a)" d="M256 7.025C118.494 7.025 7.025 118.494 7.025 256S118.494 504.975 256 504.975 504.976 393.506 504.976 256C504.975 118.494 393.504 7.025 256 7.025zm-66.427 369.343h-54.665V199.761h54.665v176.607zM161.98 176.633c-17.853 0-32.326-14.591-32.326-32.587 0-17.998 14.475-32.588 32.326-32.588s32.324 14.59 32.324 32.588c.001 17.997-14.472 32.587-32.324 32.587zm232.45 199.735h-54.4v-92.704c0-25.426-9.658-39.619-29.763-39.619-21.881 0-33.312 14.782-33.312 39.619v92.704h-52.43V199.761h52.43v23.786s15.771-29.173 53.219-29.173c37.449 0 64.257 22.866 64.257 70.169l-.001 111.825z"></path>
+                  </svg>
+                  <span class="u-screen-reader-text">LinkedIn</span>
+                </a>
+              </li>
+            </ul>
           </div>
-        </footer>
+          <div class="column xl-6 lg-12">
+            <p class="ss-copyright">
+              <span>© Copyright Arshi 2024</span>
+              <span>Design by Arshi Patel</span>
+            </p>
+          </div>
+  
+          <div class="ss-go-top">
+            <a class="smoothscroll" title="Back to Top" href="#top">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="36" height="36" fill="none" stroke="#ffffff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="17 11 12 6 7 11"></polyline>
+                <line x1="12" y1="18" x2="12" y2="6"></line>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </footer>
       <!-- end s-footer -->
     </div>
     <!-- end page-wrap -->
 
-    <!-- Java Script
-    ================================================== -->
+    <!-- Java Script ================================================== -->
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
   </body>
